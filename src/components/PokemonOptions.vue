@@ -1,7 +1,10 @@
 <template>
     <div class="options-container">
       <ul>
-        <li v-for="pokemon in pokemons" :key="pokemon.id">
+        <li v-for="pokemon in pokemons"
+        :key="pokemon.id"
+        @click="$emit( 'selection',pokemon.id )"
+        >
           {{pokemon.name.charAt(0).toUpperCase()+pokemon.name.substring(1)}}
         </li>
       </ul>
@@ -40,4 +43,9 @@
         display: flex;
         justify-content: center;
     }
+
+    .disabled {
+      pointer-events:none;
+      opacity:0.6
+  }
   </style>
