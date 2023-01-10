@@ -12,7 +12,9 @@
       />
     <template v-if="showAnswer" class="fade-in">
       <h2>{{message}}</h2>
-      <button @click="newGame">Nuevo juego</button>
+      <button @click="newGame">
+        Nuevo juego
+      </button>
     </template>
   </div>
   </template>
